@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+option go_package = "github.com/FadyGamilH/common/orders";
+
+message CreateOrderRequest {
+    int32 customerId = 1;
+    int32 productId = 2;
+    int32 qty = 3;
+}
+
+message CreateOrderResponse {
+    string status = 1;
+}
+
+message Order {
+    int32 orderId = 1;
+    int32 customerId = 2;
+    int32 productId = 3;
+    int32 qty = 4;
+}
+
+message GetOrderByOrderIdRequest {
+    int32 orderId = 1;
+}
+
+message GetOrdersBycustomerRequest {
+    int32 customerId = 1;
+}
+
+message GetOrderByOrderIdResponse {
+    Order order = 1;
+}
+
+message GetOrdersByCustomerIdResponse {
+    repeated Order orders = 1;
+}
+
+service OrderService {
+ rpc CreateOrder (CreateOrderRequest) returns (CreateOrderResponse);    
+}
+
