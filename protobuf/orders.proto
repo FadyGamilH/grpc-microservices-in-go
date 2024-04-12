@@ -39,7 +39,7 @@ message GetOrdersByCustomerIdResponse {
 
 service OrderService {
  rpc CreateOrder (CreateOrderRequest) returns (CreateOrderResponse);    
- rpc GetOrderByOrderId (GetOrderByOrderIdRequest) returns (GetOrderByOrderIdResponse);
- rpc GetOrderByCustomerId (GetOrdersBycustomerRequest) returns (GetOrdersByCustomerIdResponse);
+//  rpc GetOrderByOrderId (GetOrderByOrderIdRequest) returns (GetOrderByOrderIdResponse);
+//  rpc GetOrderByCustomerId (GetOrdersBycustomerRequest) returns (GetOrdersByCustomerIdResponse);
 }
 
