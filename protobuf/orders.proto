@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package orders;
+
 option go_package = "github.com/FadyGamilH/common/orders";
 
 message CreateOrderRequest {
@@ -37,5 +39,7 @@ message GetOrdersByCustomerIdResponse {
 
 service OrderService {
  rpc CreateOrder (CreateOrderRequest) returns (CreateOrderResponse);    
+ rpc GetOrderByOrderId (GetOrderByOrderIdRequest) returns (GetOrderByOrderIdResponse);
+ rpc GetOrderByCustomerId (GetOrdersBycustomerRequest) returns (GetOrdersByCustomerIdResponse);
 }
 
